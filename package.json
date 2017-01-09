@@ -1,23 +1,27 @@
 {
   "name": "ember-graphql-tools-shim",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.1.0",
+  "description": "An ember-cli shim for graphql-tools",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "graphql",
+    "graphql-tools"
   ],
   "license": "MIT",
-  "author": "",
+  "author": "Blake Gentry",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/bgentry/ember-graphql-tools-shim",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
     "test": "ember try:each"
   },
   "dependencies": {
+    "broccoli-merge-trees": "^1.2.1",
+    "broccoli-webpack": "^1.0.0",
     "ember-cli-babel": "^5.1.7"
   },
   "devDependencies": {
@@ -38,9 +42,12 @@
     "ember-data": "^2.10.0",
     "ember-disable-prototype-extensions": "^1.1.0",
     "ember-export-application-global": "^1.0.5",
+    "ember-graphql-shim": "0.1.0",
     "ember-load-initializers": "^0.5.1",
     "ember-resolver": "^2.0.3",
     "ember-welcome-page": "^1.0.3",
+    "graphql": "0.8.2",
+    "graphql-tools": "^0.9.0",
     "loader.js": "^4.0.10"
   },
   "engines": {

@@ -4,23 +4,33 @@ This README outlines the details of collaborating on this Ember addon.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd ember-graphql-tools-shim`
-* `npm install`
-* `bower install`
+```
+ember install ember-graphql-tools-shim
+```
 
-## Running
+## Usage
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+```js
+import graphqlTools from 'graphql-tools';
 
-## Running Tests
+const { addResolveFunctionsToSchema } = graphqlTools;
+
+addResolveFunctionsToSchema(this.pretender.schema, {
+  Query: {
+    watchers: () => mockWatchers
+  }
+});
+```
+
+## Developing
+
+### Running Tests
 
 * `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
 * `ember test`
 * `ember test --server`
 
-## Building
+### Building
 
 * `ember build`
 

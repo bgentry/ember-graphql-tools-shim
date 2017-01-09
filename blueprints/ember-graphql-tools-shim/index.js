@@ -5,10 +5,14 @@ module.exports = {
   normalizeEntityName: function() {},
 
   afterInstall: function() {
-    return this.addAddonToProject('ember-graphql-shim')
+    return this.addAddonsToProject({
+      { name: 'ember-graphql-shim' },
+      { name: 'ember-browserify' }
+    })
     .then(() => {
       return this.addPackagesToProject([
-        { name: 'graphql-tools', target: '^0.9.0' }
+        { name: 'graphql-tools', target: '^0.8.4' },
+        { name: 'graphql', target: '^0.8.2' }
       ]).then(() => {
       });
     });
